@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 import SunIcon from '../assets/theme_switcher/icon-sun.svg';
 import MoonIcon from '../assets/theme_switcher/icon-moon.svg';
 
-export default function Header() {
+export default function Header(): JSX.Element {
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {

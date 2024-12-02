@@ -7,7 +7,7 @@ import TodoList from './components/TodoList';
 
 import './App.css';
 
-function App() {
+function App(): JSX.Element {
   const { theme } = useTheme();
 
   return (

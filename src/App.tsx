@@ -1,17 +1,24 @@
-import './App.css';
+import { useTheme } from './components/ThemeContext';
+
 import Footer from './components/Footer';
 import Header from './components/Header';
 import ListEditor from './components/ListEditor';
 import TodoList from './components/TodoList';
 
+import './App.css';
+
 function App() {
+  const { theme } = useTheme();
+
   return (
-    <>
-      <Header />
-      <ListEditor />
-      <TodoList />
-      <Footer />
-    </>
+    <div className={`background ${theme}`}>
+      <div className="content_container">
+        <Header />
+        <ListEditor />
+        <TodoList />
+        <Footer />
+      </div>
+    </div>
   );
 }
 

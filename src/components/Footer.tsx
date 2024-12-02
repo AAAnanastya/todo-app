@@ -1,3 +1,5 @@
+import styles from './Footer.module.css';
+
 export default function Footer(): JSX.Element {
-  return <h3>Footer</h3>;
+  return <p className={styles.text}>Drag and drop to reorder list</p>;
 }

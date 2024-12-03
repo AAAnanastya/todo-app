@@ -1,0 +1,31 @@
+.icon-container {
+  height: 1.45rem;
+  width: 1.45rem;
+  border-radius: 50%;
+  display: flex;
+  border: 1px solid var(--color-dark-gray-purple);
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container:hover {
+  border: 1px solid transparent;
+  background: linear-gradient(to bottom right, var(--color-light-blue), var(--color-purple));
+  cursor: pointer;
+}
+
+.icon-container:hover::before {
+  content: '';
+  position: absolute;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  background-color: var(--color-dark-grayish-blue);
+  z-index: 10;
+}
+
+.icon-container.done {
+  pointer-events: none;
+  border: none;
+  background: linear-gradient(to bottom right, var(--color-light-blue), var(--color-purple));
+}

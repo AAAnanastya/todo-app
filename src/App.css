@@ -25,6 +25,15 @@
   background-color: var(--color-light-gray);
 }
 
+.content_container {
+  max-width: 33rem;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .background.dark::after {
     background-image: url(./assets/bg-mobile-dark.jpg);
@@ -32,6 +41,10 @@
 
   .background.light::after {
     background-image: url(./assets/bg-mobile-light.jpg);
+  }
+
+  .content_container {
+    padding: 3.5rem 1rem 0;
   }
 }
 
@@ -43,14 +56,8 @@
   .background.light::after {
     background-image: url(./assets/bg-desktop-light.jpg);
   }
-}
 
-.content_container {
-  max-width: 33rem;
-  width: 100%;
-  padding: 5rem 1rem 0;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .content_container {
+    padding: 5rem 1rem 0;
+  }
 }

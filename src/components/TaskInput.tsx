@@ -26,7 +26,7 @@ export default function TaskInput({ onAddTodo }: TaskInputProps): JSX.Element {
 
   return (
     <div className={`${styles['input_container']} ${styles[theme]}`}>
-      <TaskStatusIcon />
+      <TaskStatusIcon status="default" />
       <input type="text" value={inputValue} onChange={handleInputChange} onKeyUp={handleKeyUp} placeholder="Create a new todo..."></input>
     </div>
   );

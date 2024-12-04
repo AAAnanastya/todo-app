@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+.icon-container.nonclick {
+  pointer-events: none;
+}
+
 .icon-container:hover {
   border: 1px solid transparent;
   background: linear-gradient(to bottom right, var(--color-light-blue), var(--color-purple));
@@ -21,11 +25,16 @@
   width: 1.3rem;
   border-radius: 50%;
   background-color: var(--color-dark-grayish-blue);
-  z-index: 10;
+  z-index: 1;
 }
 
 .icon-container.done {
+  position: relative;
   pointer-events: none;
   border: none;
   background: linear-gradient(to bottom right, var(--color-light-blue), var(--color-purple));
+}
+
+.icon-container.done img {
+  z-index: 20;
 }

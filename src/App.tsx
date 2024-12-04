@@ -18,16 +18,36 @@ function App(): JSX.Element {
     state: 'active' | 'done';
   }
 
-  const handleAddTodo = (task: string) => {
-    setTodos((prevTodos) => [...prevTodos, { task, state: 'active' }]);
-  };
+  function handleAddTodo(selectedTask: string) {
+    setTodos((prevTodos) => [...prevTodos, { task: selectedTask, state: 'active' }]);
+  }
+
+  function handleTaskStatusChange(selectedTask: string) {
+    let newParams: Todo[] = todos.map((todo) => {
+      if (todo.task === selectedTask) {
+        switch (todo.state) {
+          case 'active':
+            return { ...todo, state: 'done' };
+          case 'done':
+            return { ...todo, state: 'active' };
+        }
+      }
+      return todo;
+    });
+    setTodos(newParams);
+  }
+
+  function handleDeleteTask(selectedTask: string) {
+    let newParams: Todo[] = todos.filter((todo) => todo.task !== selectedTask);
+    setTodos(newParams);
+  }
 
   return (
     <div className={`background ${theme}`}>
       <div className="content_container">
         <Header />
         <TaskInput onAddTodo={handleAddTodo} />
-        <TaskList todos={todos} />
+        <TaskList todos={todos} onDeleteTask={handleDeleteTask} onStatusChange={handleTaskStatusChange} />
         <Footer />
       </div>
     </div>

@@ -1,0 +1,15 @@
+.todo-container {
+  width: 100%;
+  height: max-content;
+  margin: 0;
+  padding: 0;
+  border-radius: 6px;
+}
+
+.todo-container.dark {
+  background-color: var(--color-dark-grayish-blue);
+}
+
+.todo-container.light {
+  background-color: var(--color-light-gray);
+}

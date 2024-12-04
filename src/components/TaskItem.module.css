@@ -1,0 +1,39 @@
+.item-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.6rem;
+  padding-inline: 1.5rem;
+  border-bottom: 1px solid var(--color-dark-gray-purple);
+  box-sizing: border-box;
+}
+
+.task-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 75%;
+}
+
+.task-wrapper p {
+  width: max-content;
+  color: var(--color-grayish-purple);
+  cursor: pointer;
+}
+
+.task-wrapper p.done {
+  color: var(--color-dark-gray-purple);
+  text-decoration: line-through;
+}
+
+.item-container img.cross {
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.item-container:hover img.cross {
+  opacity: 1;
+  visibility: visible;
+}

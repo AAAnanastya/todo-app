@@ -1,5 +1,6 @@
 .text {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   color: var(--color-dark-gray-purple);
+  opacity: 0.8;
   margin-top: 2rem;
 }

@@ -47,8 +47,12 @@
   cursor: pointer;
 }
 
-.task-bar p:hover {
+.task-bar.dark p:hover {
   color: var(--color-light-gray);
+}
+
+.task-bar.light p:hover {
+  color: var(--color-dark-grayish-blue);
 }
 
 .task-bar p.non-click {
@@ -62,4 +66,20 @@
 .task-navigation {
   display: flex;
   gap: 1rem;
+}
+
+.separate-nav-container {
+  margin-top: 1.5rem;
+  width: 100%;
+  border-radius: 6px;
+  height: 3.5rem;
+  justify-content: center;
+}
+
+.task-bar.dark.separate-nav-container {
+  background-color: var(--color-dark-grayish-blue);
+}
+
+.task-bar.light.separate-nav-container {
+  background-color: var(--color-light-gray);
 }

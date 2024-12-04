@@ -24,8 +24,15 @@
   height: 1.3rem;
   width: 1.3rem;
   border-radius: 50%;
-  background-color: var(--color-dark-grayish-blue);
   z-index: 1;
+}
+
+.icon-container.dark:hover::before {
+  background-color: var(--color-dark-grayish-blue);
+}
+
+.icon-container.light:hover::before {
+  background-color: var(--color-light-gray);
 }
 
 .icon-container.done {

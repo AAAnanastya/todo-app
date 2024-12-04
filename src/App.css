@@ -22,7 +22,7 @@
 }
 
 .background.light {
-  background-color: var(--color-light-gray);
+  background-color: var(--color-gray);
 }
 
 .content_container {

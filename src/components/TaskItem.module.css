@@ -5,8 +5,15 @@
   justify-content: space-between;
   height: 3.6rem;
   padding-inline: 1.5rem;
-  border-bottom: 1px solid var(--color-dark-gray-purple);
   box-sizing: border-box;
+}
+
+.item-container.dark {
+  border-bottom: 1px solid var(--color-dark-gray-purple);
+}
+
+.item-container.light {
+  border-bottom: 1px solid var(--color-light-grayish-purple);
 }
 
 .task-wrapper {
@@ -18,13 +25,27 @@
 
 .task-wrapper p {
   width: max-content;
-  color: var(--color-grayish-purple);
   cursor: pointer;
 }
 
-.task-wrapper p.done {
+.task-wrapper.dark p {
+  color: var(--color-grayish-purple);
+}
+
+.task-wrapper.light p {
   color: var(--color-dark-gray-purple);
+}
+
+.task-wrapper p.done {
   text-decoration: line-through;
+}
+
+.task-wrapper.dark p.done {
+  color: var(--color-dark-gray-purple);
+}
+
+.task-wrapper.light p.done {
+  color: var(--color-light-grayish-purple);
 }
 
 .item-container img.cross {

@@ -1,3 +1,5 @@
+import { useTheme } from './ThemeContext';
+
 import TaskStatusIcon from './TaskStatusIcon';
 
 import styles from './TaskItem.module.css';
@@ -11,9 +13,11 @@ interface TaskItemProps {
 }
 
 export default function TaskItem({ task, status, toDelete, statusChange }: TaskItemProps): JSX.Element {
+  const { theme } = useTheme();
+
   return (
-    <div className={styles['item-container']}>
-      <div className={styles['task-wrapper']} onClick={() => statusChange(task)}>
+    <div className={`${styles['item-container']} ${styles[theme]}`}>
+      <div className={`${styles['task-wrapper']}  ${styles[theme]}`} onClick={() => statusChange(task)}>
         <TaskStatusIcon status={status} />
         <p className={`${status === 'done' && styles.done}`}>{task}</p>
       </div>

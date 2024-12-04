@@ -6,7 +6,8 @@
 
 :root {
   --color-light-gray: hsl(0, 0%, 98%);
-  --color-gray: hsl(260, 2%, 76%);
+  --color-gray: hsl(260, 16%, 96%);
+  --color-light-grayish-purple: hsl(227, 18%, 90%);
   --color-grayish-purple: hsl(231, 18%, 71%);
   --color-dark-gray-purple: hsl(233, 8%, 44%);
   --color-dark-gray: hsl(247, 18%, 10%);

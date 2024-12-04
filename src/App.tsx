@@ -1,5 +1,5 @@
 import { useTheme } from './components/ThemeContext';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -11,7 +11,16 @@ import './App.css';
 function App(): JSX.Element {
   const { theme } = useTheme();
 
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const loadTodos = () => {
+    const savedTodos = localStorage.getItem('todos');
+    return savedTodos ? JSON.parse(savedTodos) : [];
+  };
+
+  const [todos, setTodos] = useState<Todo[]>(loadTodos);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   interface Todo {
     task: string;

@@ -4,6 +4,22 @@
   border-radius: 6px;
 }
 
+.empty-mock {
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--color-dark-gray-purple);
+  border-bottom: 1px solid var(--color-dark-gray-purple);
+}
+
+@media (max-width: 768px) {
+  .empty-mock {
+    font-size: 1rem;
+  }
+}
+
 .todo-container ul {
   margin: 0;
   padding: 0;

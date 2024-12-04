@@ -25,6 +25,7 @@ export default function TaskList({ todos, onDeleteTask, onStatusChange, onClearC
 
   return (
     <div className={`${styles['todo-container']} ${styles[theme]}`}>
+      {todos.length < 1 && <div className={styles['empty-mock']}>It seems there are no task added yet</div>}
       <ul>
         {filters === 'all'
           ? todos.map((todo) => (

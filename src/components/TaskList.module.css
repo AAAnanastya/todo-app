@@ -1,9 +1,12 @@
 .todo-container {
   width: 100%;
   height: max-content;
+  border-radius: 6px;
+}
+
+.todo-container ul {
   margin: 0;
   padding: 0;
-  border-radius: 6px;
 }
 
 .todo-container.dark {
@@ -12,4 +15,35 @@
 
 .todo-container.light {
   background-color: var(--color-light-gray);
+}
+
+.task-bar {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1.5rem;
+}
+
+.task-bar p {
+  color: var(--color-dark-gray-purple);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.task-bar p:hover {
+  color: var(--color-light-gray);
+}
+
+.task-bar p.non-click {
+  pointer-events: none;
+}
+
+.task-bar p.active {
+  color: var(--color-purple-blue);
+}
+
+.task-navigation {
+  display: flex;
+  gap: 1rem;
 }

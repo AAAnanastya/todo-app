@@ -42,12 +42,22 @@ function App(): JSX.Element {
     setTodos(newParams);
   }
 
+  function handleDeleteCompleted() {
+    let activeTasks: Todo[] = todos.filter((todo) => todo.state === 'active');
+    setTodos(activeTasks);
+  }
+
   return (
     <div className={`background ${theme}`}>
       <div className="content_container">
         <Header />
         <TaskInput onAddTodo={handleAddTodo} />
-        <TaskList todos={todos} onDeleteTask={handleDeleteTask} onStatusChange={handleTaskStatusChange} />
+        <TaskList
+          todos={todos}
+          onDeleteTask={handleDeleteTask}
+          onStatusChange={handleTaskStatusChange}
+          onClearCompleted={handleDeleteCompleted}
+        />
         <Footer />
       </div>
     </div>

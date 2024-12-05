@@ -1,4 +1,5 @@
 import { useTheme } from './ThemeContext';
+import { Reorder } from 'framer-motion';
 
 import TaskStatusIcon from './TaskStatusIcon';
 
@@ -6,23 +7,25 @@ import styles from './TaskItem.module.css';
 import cross from '../assets/checker/icon-cross.svg';
 
 interface TaskItemProps {
-  task: string;
-  status: 'active' | 'done';
+  todo: {
+    task: string;
+    state: 'active' | 'done';
+  };
   toDelete: (task: string) => void;
   statusChange: (task: string) => void;
 }
 
-export default function TaskItem({ task, status, toDelete, statusChange }: TaskItemProps): JSX.Element {
+export default function TaskItem({ todo, toDelete, statusChange }: TaskItemProps): JSX.Element {
   const { theme } = useTheme();
 
   return (
-    <div className={`${styles['item-container']} ${styles[theme]}`}>
-      <div className={`${styles['task-wrapper']}  ${styles[theme]}`} onClick={() => statusChange(task)}>
-        <TaskStatusIcon status={status} />
-        <p className={`${status === 'done' && styles.done}`}>{task}</p>
+    <Reorder.Item value={todo} className={`${styles['item-container']} ${styles[theme]}`}>
+      <div className={`${styles['task-wrapper']}  ${styles[theme]}`} onClick={() => statusChange(todo.task)}>
+        <TaskStatusIcon status={todo.state} />
+        <p className={`${todo.state === 'done' && styles.done}`}>{todo.task}</p>
       </div>
 
-      <img className={styles.cross} src={cross} alt="X" onClick={() => toDelete(task)} />
-    </div>
+      <img className={styles.cross} src={cross} alt="X" onClick={() => toDelete(todo.task)} />
+    </Reorder.Item>
   );
 }

@@ -66,6 +66,7 @@ function App(): JSX.Element {
           onDeleteTask={handleDeleteTask}
           onStatusChange={handleTaskStatusChange}
           onClearCompleted={handleDeleteCompleted}
+          toReorder={setTodos}
         />
         <Footer />
       </div>

@@ -6,6 +6,7 @@
   height: 3.6rem;
   padding-inline: 1.5rem;
   box-sizing: border-box;
+  transition: border-bottom 0.3s ease-in-out;
 }
 
 .item-container.dark {

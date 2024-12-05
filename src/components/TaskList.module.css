@@ -2,6 +2,7 @@
   width: 100%;
   height: max-content;
   border-radius: 6px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .empty-mock {
@@ -45,6 +46,7 @@
   color: var(--color-dark-gray-purple);
   font-size: 0.8rem;
   cursor: pointer;
+  transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out;
 }
 
 .task-bar.dark p:hover {
@@ -61,6 +63,8 @@
 
 .task-bar p.active {
   color: var(--color-purple-blue);
+  font-weight: bold;
+  pointer-events: none;
 }
 
 .task-navigation {
@@ -74,6 +78,7 @@
   border-radius: 6px;
   height: 3.5rem;
   justify-content: center;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .task-bar.dark.separate-nav-container {

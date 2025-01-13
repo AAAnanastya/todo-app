@@ -1,50 +1,35 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Todo app solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Разработка to-do приложения в рамках [челленджа от Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW).
 
-Currently, two official plugins are available:
+## Обзор челленджа
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Пользователи должны иметь возможность:
 
-## Expanding the ESLint configuration
+-   Видеть оптимальный лэйаут приложения в зависимости от размера экрана их устройства
+-   Наблюдать состояния при наведении для всех интерактивных элементов на странице
+-   Добавлять новые задачи в список
+-   Отмечать задачи как выполненные
+-   Удалять задачи из списка
+-   Фильтровать задачи по категориям: все/активные/выполненные
+-   Удалять все выполненные задачи
+-   Переключать светлую и темную тему
+-   Перетаскивать элементы списка для изменения их порядка
+-   Информация не должна быть утеряна при закрытии или перезагрузке приложения
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Реализация
+Создано с использованием:
 
-- Configure the top-level `parserOptions` property like this:
+-   Семантической разметки HTML5
+-   Пользовательских свойств CSS
+-   React + TypeScript
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Все изменения, внесенные пользователем, сохраняются в local storage.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Скриншоты
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+#### Desktop
+<img src='https://github.com/AAAnanastya/todo-app/blob/main/Preview/desk_dark.jpeg' height='350' /> <img src='https://github.com/AAAnanastya/todo-app/blob/main/Preview/desk_light.jpeg' height='350' /> 
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+#### Mobile
+<img src='https://github.com/AAAnanastya/todo-app/blob/main/Preview/mob_dark.jpeg' height='600' />   <img src='https://github.com/AAAnanastya/todo-app/blob/main/Preview/mob_light.jpeg' height='600' /> 
